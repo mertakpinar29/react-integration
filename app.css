@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.grid-container {
+    display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main main main'
+    'menu main main main main main';
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.header {
+  grid-area: header;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.menu {
+  background-color: rgba(255, 255, 255, 0.8);
+  grid-area: menu;
+  padding: 20px;
+  list-style: none;
+  font-size: 30px;
+}
+
+.menu > li {
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.main {
+    grid-area: main;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+   
+}
