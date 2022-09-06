@@ -21,33 +21,24 @@ var MainApp = function MainApp() {
 };
 
 var Home = function Home() {
-  return React.createElement(
-    "h1",
-    null,
-    "HomePage"
-  );
+  return React.createElement("h1", null, "HomePage");
 };
 var App1 = function App1(props) {
   return React.createElement(
     React.Suspense,
-    { fallback: React.createElement(
-        "h2",
-        null,
-        "loading.."
-      ) },
+    { fallback: React.createElement("h2", null, "loading..") },
     React.createElement(App1Lazy, { routerProps: props })
   );
 };
 var App2 = function App2(props) {
   return React.createElement(
     React.Suspense,
-    { fallback: React.createElement(
-        "h2",
-        null,
-        "loading.."
-      ) },
+    { fallback: React.createElement("h2", null, "loading..") },
     React.createElement(App2Lazy, { routerProps: props })
   );
 };
 
-ReactDOM.render(React.createElement(MainApp, null), document.querySelector(".main"));
+ReactDOM.render(
+  React.createElement(MainApp, null),
+  document.querySelector(".main")
+);
